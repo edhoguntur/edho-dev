@@ -24,6 +24,7 @@ const projects = (await getCollection('work')).sort(
 				tagline="See my most recent projects below to get an idea of my past experience."
 				align="start"
 			/>
+			<h4 style="color: yellow">(Will Update Soon)</h4>
 			<Grid variant="offset">
 				{
 					projects.map((project) => (
@@ -33,6 +34,7 @@ const projects = (await getCollection('work')).sort(
 					))
 				}
 			</Grid>
+
 		</main>
 		<ContactCTA />
 	</div>
