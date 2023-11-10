@@ -30,14 +30,15 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Edho Guntur"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Hello👋, I'm Edho"
+					tagline="A Creative iOS and Backend Alchemist who is currently based in Indonesia. Transforming Ideas into Digital Realities, One Journey at a Time. "
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="app-store-logo" size="1.33em" />iOS Developer</Pill>
+						<Pill><Icon icon="code" size="1.33em" />Backend Developer</Pill>
+						<Pill><Icon icon="airplane-tilt" size="1.33em" />Traveller</Pill>
+						<Pill><Icon icon="pencil-line" size="1.33em" /> Japanese Learner</Pill>
 					</div>
 				</Hero>
 
@@ -45,7 +46,7 @@ const projects = (await getCollection('work'))
 					alt="Edho Guntur smiling in a red plaid shirt and tortoise shell glasses"
 					width="480"
 					height="620"
-					src="/assets/portrait.jpg"
+					src="/assets/edho1.png"
 				/>
 			</header>
 
@@ -79,7 +80,7 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
+			<!-- <section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Mentions</h3>
 					<p>
@@ -99,7 +100,7 @@ const projects = (await getCollection('work'))
 						}
 					</Grid>
 				</div>
-			</section>
+			</section> -->
 		</main>
 
 		<ContactCTA />
@@ -115,7 +116,7 @@ const projects = (await getCollection('work'))
 	}
 
 	.roles {
-		display: none;
+		display: flex;
 	}
 
 	.hero img {
@@ -137,6 +138,7 @@ const projects = (await getCollection('work'))
 		.roles {
 			margin-top: 0.5rem;
 			display: flex;
+			flex-flow: row wrap;
 			gap: 0.5rem;
 		}
 
