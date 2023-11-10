@@ -3,6 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
+import Pill from "../components/Pill.astro";
 ---
 
 <BaseLayout
@@ -13,6 +15,7 @@ import Hero from "../components/Hero.astro";
     <main class="wrapper about">
       <Hero
         title="About"
+		subtitle=""
         tagline="Thanks for stopping by. Read below to learn more about myself"
       >
         <!-- <img
@@ -58,47 +61,42 @@ import Hero from "../components/Hero.astro";
 			</section> -->
       <section>
         <h2 class="section-title">Skills</h2>
-        <div class="content grid-container">
+        <div class="content">
           <h5>Programming Languages:</h5>
-          <ul>
-            <li>Golang</li>
-            <li>Typescript</li>
-            <li>C#</li>
-            <li>PHP</li>
-            <li>Swift</li>
-          </ul>
-
-          <h5>Frameworks:</h5>
-          <ul>
-            <li>SwiftUI</li>
-            <li>SwiftData</li>
-            <li>.NET</li>
-            <li>Laravel</li>
-            <li>Express</li>
-          </ul>
-
-          <h5>Databases:</h5>
-          <ul>
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-            <li>MongoDB</li>
-            <li>MsSql</li>
-          </ul>
-
-          <h5>Tools:</h5>
-          <ul>
-            <li>Xcode</li>
-            <li>Visual Code</li>
-            <li>Visual Studio</li>
-            <li>Android Studio</li>
-          </ul>
-
-          <h5>Others:</h5>
-          <ul>
-            <li>Project Management</li>
-            <li>Administration</li>
-            <li>English & Japanese(N5)</li>
-          </ul>
+          <div class="skills">
+            <Pill>Golang ⭐</Pill>
+			<Pill>Typescript</Pill>
+			<Pill>Swift ⭐</Pill>
+			<Pill>PHP</Pill>
+			<Pill>C#</Pill>
+		  </div>
+		  <h5>Frameworks:</h5>
+          <div class="skills">
+            <Pill>SwiftUI ⭐</Pill>
+			<Pill>SwiftData</Pill>
+			<Pill>.NET</Pill>
+			<Pill>Laravel</Pill>
+			<Pill>Express</Pill>
+		  </div>
+		  <h5>Tools:</h5>
+          <div class="skills">
+            <Pill><Icon icon="app-store-logo" size="1.33em" /> Xcode ⭐</Pill>
+			<Pill>VScode</Pill>
+			<Pill>Visual Studio</Pill>
+		  </div>
+		  <h5>Database:</h5>
+          <div class="skills">
+            <Pill>PostgreSQL ⭐</Pill>
+			<Pill>MySQL</Pill>
+			<Pill>SQL Server</Pill>
+		  </div>
+		  <h5>Others:</h5>
+          <div class="skills">
+            <Pill>Business Analyst</Pill>
+			<Pill>Project Management</Pill>
+			<Pill>English</Pill>
+			<Pill>Japanese(N5)</Pill>
+		  </div>
         </div>
       </section>
     </main>
@@ -158,18 +156,20 @@ import Hero from "../components/Hero.astro";
       grid-column-start: 2;
     }
 
+    .skills {
+      display: flex;
+      gap: 0.5rem;
+    }
+
     section {
       display: contents;
       font-size: var(--text-lg);
     }
   }
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    max-width: 100%;
-    list-style: none;
-    padding: 0;
+  .skills {
+    display: flex;
+	flex-flow: row wrap;
+	padding: 5px;
   }
 </style>

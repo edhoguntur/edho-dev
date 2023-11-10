@@ -31,6 +31,7 @@ const projects = (await getCollection('work'))
 			<header class="hero">
 				<Hero
 					title="Hello👋, I'm Edho"
+					subtitle='iOS Developer | Backend Engineer | Freelancer'
 					tagline="A Creative iOS and Backend Alchemist who is currently based in Indonesia. Transforming Ideas into Digital Realities, One Journey at a Time. "
 					align="start"
 				>
@@ -117,6 +118,7 @@ const projects = (await getCollection('work'))
 
 	.roles {
 		display: flex;
+		flex-flow: row wrap;
 	}
 
 	.hero img {
@@ -138,7 +140,7 @@ const projects = (await getCollection('work'))
 		.roles {
 			margin-top: 0.5rem;
 			display: flex;
-			flex-flow: row wrap;
+			/* flex-flow: row wrap; */
 			gap: 0.5rem;
 		}
 
