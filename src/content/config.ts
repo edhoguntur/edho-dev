@@ -4,7 +4,6 @@ export const collections = {
 	work: defineCollection({
 		schema: z.object({
 			title: z.string(),
-			subtitle: z.string(),
 			description: z.string(),
 			publishDate: z.coerce.date(),
 			tags: z.array(z.string()),
