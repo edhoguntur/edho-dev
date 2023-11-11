@@ -1,7 +1,7 @@
 # Astro Starter Kit: Portfolio
 
 ```sh
-npm create astro@latest -- --template portfolio
+npm create astro@latest --template portfolio
 ```
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
